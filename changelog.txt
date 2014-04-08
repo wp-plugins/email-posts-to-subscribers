@@ -1,0 +1,27 @@
+Plugin Name	: Email posts to subscribers
+Plugin URI	: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
+Author		: Gopi Ramasamy
+Author URI	: http://www.gopiplus.com
+License		: GPLv2 or later
+License URI	: http://www.gnu.org/licenses/gpl-2.0.html
+ 
+********************************Version 1.0************************************************************
+
+First version.
+
+The aim of this plugin is One Time Configuration and Life Time Newsletter to subscribers. This plugin 
+generate a newsletter with the latest available posts in the blog and send to your subscriber. We can 
+easily schedule the newsletter daily, weekly or monthly. 10 default templates available with this plugin, 
+also admin can create the templates using visual editor.
+ 
+********************************Version 1.1************************************************************
+
+1. Security fix, removed all wp-config.php file direct include.
+	a) job/optin.php, 	b) job/subscribe.php, c) job/unsubscribe.php, d) job/viewstatus.php
+	e) cronjob/cronjob.php, f) export/ export-email-address.php
+2. Minor text changes in all PHP files.
+3. Added options to translate into other languages. 
+
+********************************Version 1.2************************************************************
+
+Minor change in the register.php class

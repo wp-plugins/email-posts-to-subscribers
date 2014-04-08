@@ -1,0 +1,1089 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Email posts to subscribers\n"
+"POT-Creation-Date: 2014-04-08 19:32+0800\n"
+"PO-Revision-Date: 2014-04-08 19:32+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/register.php:49
+msgid "These tables could not be created on installation "
+msgstr ""
+
+#: ../classes/register.php:76 ../classes/register.php:77
+msgid "Email Posts"
+msgstr "மின்னஞ்சல்"
+
+#: ../classes/register.php:79 ../classes/register.php:80
+msgid "Subscribers"
+msgstr "சந்தாதாரர்கள்"
+
+#: ../classes/register.php:82 ../classes/register.php:83
+msgid "Templates"
+msgstr "டெம்ப்ளேட்கள்"
+
+#: ../classes/register.php:85 ../classes/register.php:86
+#: ../configuration/configuration-show.php:45
+msgid "Mail Configuration"
+msgstr "மெயில் கட்டமைப்பு"
+
+#: ../classes/register.php:88 ../classes/register.php:89
+#: ../sendmail/sendmail-subscriber.php:204
+#: ../sendmail/sendmail-subscriber.php:206
+msgid "Send Email"
+msgstr "மின்னஞ்சல் அனுப்பு"
+
+#: ../classes/register.php:91 ../classes/register.php:92
+#: ../settings/settings-edit.php:169
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+#: ../classes/register.php:94 ../classes/register.php:95
+msgid "Schedule Email"
+msgstr "அட்டவணை மின்னஞ்சல்"
+
+#: ../classes/register.php:97 ../classes/register.php:98
+msgid "Sent Report"
+msgstr "அறிக்கை"
+
+#: ../classes/register.php:100 ../classes/register.php:101 ../help/help.php:5
+msgid "Help & Info"
+msgstr "உதவி"
+
+#: ../classes/register.php:165
+msgid "Widget Title"
+msgstr ""
+
+#: ../classes/register.php:169
+msgid "Name Field"
+msgstr ""
+
+#: ../classes/register.php:176
+msgid "Short Description"
+msgstr ""
+
+#: ../configuration/configuration-add.php:30
+#: ../configuration/configuration-add.php:101
+#: ../configuration/configuration-edit.php:43
+#: ../configuration/configuration-edit.php:97
+msgid "Please enter mail subject."
+msgstr ""
+
+#: ../configuration/configuration-add.php:51
+msgid "Mail configuration was successfully created."
+msgstr ""
+
+#: ../configuration/configuration-add.php:85
+#: ../configuration/configuration-edit.php:83 ../settings/schedule-show.php:9
+#: ../settings/schedule-show.php:10 ../settings/schedule-show.php:11
+#: ../settings/settings-edit.php:152 ../subscribers/view-subscriber-add.php:74
+#: ../subscribers/view-subscriber-edit.php:71
+#: ../subscribers/view-subscriber-import.php:78
+#: ../subscribers/view-subscriber-import.php:108
+#: ../template/template-add.php:70 ../template/template-edit.php:75
+msgid "Click here"
+msgstr ""
+
+#: ../configuration/configuration-add.php:85
+#: ../configuration/configuration-edit.php:83
+#: ../settings/settings-edit.php:153 ../subscribers/view-subscriber-add.php:74
+#: ../subscribers/view-subscriber-edit.php:71
+#: ../subscribers/view-subscriber-import.php:78
+#: ../subscribers/view-subscriber-import.php:108
+#: ../template/template-add.php:71 ../template/template-edit.php:76
+msgid " to view the details"
+msgstr ""
+
+#: ../configuration/configuration-add.php:97
+msgid "Add configuration"
+msgstr ""
+
+#: ../configuration/configuration-add.php:99
+#: ../configuration/configuration-edit.php:95
+msgid "Mail subject"
+msgstr ""
+
+#: ../configuration/configuration-add.php:103
+#: ../configuration/configuration-edit.php:99
+#: ../configuration/configuration-show.php:64
+#: ../configuration/configuration-show.php:77
+msgid "Template"
+msgstr ""
+
+#: ../configuration/configuration-add.php:118
+#: ../configuration/configuration-edit.php:120
+msgid "Please select template for this configuration."
+msgstr ""
+
+#: ../configuration/configuration-add.php:120
+#: ../configuration/configuration-cron.php:109
+#: ../configuration/configuration-edit.php:122
+msgid "Post Details"
+msgstr ""
+
+#: ../configuration/configuration-add.php:121
+#: ../configuration/configuration-edit.php:123
+msgid "Post count."
+msgstr ""
+
+#: ../configuration/configuration-add.php:131
+#: ../configuration/configuration-edit.php:133
+msgid "Number of post to add in the email."
+msgstr ""
+
+#: ../configuration/configuration-add.php:133
+#: ../configuration/configuration-edit.php:135
+msgid "Post categories"
+msgstr ""
+
+#: ../configuration/configuration-add.php:135
+#: ../configuration/configuration-edit.php:137
+msgid "Please enter category IDs, separated by commas."
+msgstr ""
+
+#: ../configuration/configuration-add.php:137
+#: ../configuration/configuration-edit.php:139
+msgid "Post orderbys"
+msgstr ""
+
+#: ../configuration/configuration-add.php:146
+#: ../configuration/configuration-edit.php:148
+msgid "Select your post orderbys"
+msgstr ""
+
+#: ../configuration/configuration-add.php:148
+#: ../configuration/configuration-edit.php:150
+msgid "Post order"
+msgstr ""
+
+#: ../configuration/configuration-add.php:153
+#: ../configuration/configuration-edit.php:155
+msgid "Select your post order"
+msgstr ""
+
+#: ../configuration/configuration-add.php:156
+#: ../configuration/configuration-edit.php:158
+msgid "Mail Setting"
+msgstr ""
+
+#: ../configuration/configuration-add.php:158
+#: ../configuration/configuration-edit.php:160
+msgid "Mail count for one shot."
+msgstr ""
+
+#: ../configuration/configuration-add.php:171
+#: ../configuration/configuration-edit.php:173
+msgid "How many emails you want to send at one shot"
+msgstr ""
+
+#: ../configuration/configuration-add.php:173
+#: ../configuration/configuration-edit.php:175
+msgid "Add unsubscribe link"
+msgstr ""
+
+#: ../configuration/configuration-add.php:177
+#: ../configuration/configuration-edit.php:179
+msgid "Do you want to add unsubscribe link with this mail configuration."
+msgstr ""
+
+#: ../configuration/configuration-add.php:179
+#: ../configuration/configuration-edit.php:181
+msgid "View status (BETA)"
+msgstr ""
+
+#: ../configuration/configuration-add.php:183
+#: ../configuration/configuration-edit.php:185
+msgid "Like to track whether that email is viewed or not?"
+msgstr ""
+
+#: ../configuration/configuration-add.php:188
+#: ../subscribers/view-subscriber-add.php:108 ../template/template-add.php:105
+msgid "Insert Details"
+msgstr ""
+
+#: ../configuration/configuration-add.php:189
+#: ../configuration/configuration-edit.php:191
+#: ../sendmail/sendmail-subscriber.php:208 ../settings/settings-edit.php:344
+#: ../subscribers/view-subscriber-add.php:109
+#: ../subscribers/view-subscriber-edit.php:104
+#: ../template/template-add.php:106 ../template/template-edit.php:113
+msgid "Cancel"
+msgstr ""
+
+#: ../configuration/configuration-add.php:190
+#: ../configuration/configuration-cron.php:125
+#: ../configuration/configuration-edit.php:192
+#: ../configuration/configuration-preview.php:38
+#: ../configuration/configuration-show.php:169
+#: ../sendmail/sendmail-subscriber.php:209
+#: ../sentmail/deliverreport-show.php:111 ../sentmail/sentmail-preview.php:29
+#: ../settings/settings-edit.php:345
+#: ../subscribers/view-subscriber-add.php:110
+#: ../subscribers/view-subscriber-edit.php:105
+#: ../subscribers/view-subscriber-export.php:73
+#: ../subscribers/view-subscriber-import.php:130
+#: ../subscribers/view-subscriber-page.php:72
+#: ../subscribers/view-subscriber-show.php:178
+#: ../subscribers/view-subscriber-show.php:277
+#: ../template/template-add.php:107 ../template/template-edit.php:114
+#: ../template/template-preview.php:28 ../template/template-show.php:115
+msgid "Help"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:9
+#: ../configuration/configuration-edit.php:10
+#: ../configuration/configuration-preview.php:9
+#: ../configuration/configuration-show.php:15
+#: ../sentmail/sentmail-preview.php:10 ../sentmail/sentmail-show.php:17
+#: ../settings/settings-edit.php:11 ../subscribers/view-subscriber-edit.php:11
+#: ../subscribers/view-subscriber-show.php:19 ../template/template-edit.php:10
+#: ../template/template-preview.php:9 ../template/template-show.php:15
+msgid "Oops, selected details doesnt exist."
+msgstr ""
+
+#: ../configuration/configuration-cron.php:43
+msgid "Total Emails"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:53
+msgid "Total valid email address in our database :"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:57
+#: ../configuration/configuration-show.php:101
+msgid "Cron Links"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:61
+msgid ""
+"Note: Email will be retrieved based on Database ID (i.e. Oldest email come "
+"first)"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:63
+msgid "Cron link for first"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:63
+#: ../configuration/configuration-cron.php:69
+#: ../configuration/configuration-cron.php:75
+#: ../configuration/configuration-cron.php:81
+#: ../configuration/configuration-cron.php:87
+msgid "email"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:65
+#: ../configuration/configuration-cron.php:71
+#: ../configuration/configuration-cron.php:77
+#: ../configuration/configuration-cron.php:83
+#: ../configuration/configuration-cron.php:89
+msgid "click here to view emails"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:69
+msgid "Cron link for second"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:75
+msgid "Cron link for third"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:81
+msgid "Cron link for fourth"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:87
+msgid "Cron link for fifth"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:95
+msgid "Template Details"
+msgstr ""
+
+#: ../configuration/configuration-cron.php:124
+#: ../configuration/configuration-preview.php:36
+#: ../sentmail/deliverreport-show.php:110 ../sentmail/sentmail-preview.php:28
+#: ../subscribers/view-subscriber-export.php:72
+#: ../subscribers/view-subscriber-import.php:129
+#: ../subscribers/view-subscriber-page.php:71
+#: ../template/template-preview.php:26
+msgid "Back"
+msgstr ""
+
+#: ../configuration/configuration-edit.php:64
+msgid "Mail configuration was successfully updated."
+msgstr ""
+
+#: ../configuration/configuration-edit.php:93
+msgid "Edit configuration"
+msgstr ""
+
+#: ../configuration/configuration-edit.php:190
+#: ../subscribers/view-subscriber-edit.php:103
+#: ../template/template-edit.php:112
+msgid "Update Details"
+msgstr ""
+
+#: ../configuration/configuration-preview.php:25
+msgid "Preview Mail"
+msgstr ""
+
+#: ../configuration/configuration-preview.php:37
+#: ../configuration/configuration-show.php:100
+#: ../subscribers/view-subscriber-show.php:225
+#: ../template/template-preview.php:27 ../template/template-show.php:88
+msgid "Edit"
+msgstr ""
+
+#: ../configuration/configuration-show.php:30 ../sentmail/sentmail-show.php:32
+#: ../subscribers/view-subscriber-show.php:36
+#: ../subscribers/view-subscriber-show.php:80 ../template/template-show.php:30
+msgid "Selected record was successfully deleted."
+msgstr ""
+
+#: ../configuration/configuration-show.php:46
+#: ../configuration/configuration-show.php:168
+#: ../subscribers/view-subscriber-show.php:156
+#: ../subscribers/view-subscriber-show.php:175
+#: ../subscribers/view-subscriber-show.php:274
+#: ../template/template-show.php:45
+msgid "Add New"
+msgstr ""
+
+#: ../configuration/configuration-show.php:63
+#: ../configuration/configuration-show.php:76
+msgid "Mail Subject"
+msgstr ""
+
+#: ../configuration/configuration-show.php:65
+#: ../configuration/configuration-show.php:78
+msgid "Send Count"
+msgstr ""
+
+#: ../configuration/configuration-show.php:66
+#: ../configuration/configuration-show.php:79
+msgid "No of Post"
+msgstr ""
+
+#: ../configuration/configuration-show.php:67
+#: ../configuration/configuration-show.php:80
+msgid "Post Category"
+msgstr ""
+
+#: ../configuration/configuration-show.php:68
+#: ../configuration/configuration-show.php:81
+msgid "Orderby"
+msgstr ""
+
+#: ../configuration/configuration-show.php:69
+#: ../configuration/configuration-show.php:82
+msgid "Order"
+msgstr ""
+
+#: ../configuration/configuration-show.php:70
+#: ../configuration/configuration-show.php:83
+#: ../configuration/configuration-show.php:123
+msgid "Cron Details"
+msgstr ""
+
+#: ../configuration/configuration-show.php:102
+msgid "Send Mail"
+msgstr ""
+
+#: ../configuration/configuration-show.php:103
+#: ../template/template-show.php:59 ../template/template-show.php:68
+#: ../template/template-show.php:95
+msgid "Preview"
+msgstr ""
+
+#: ../configuration/configuration-show.php:106
+#: ../subscribers/view-subscriber-show.php:228
+#: ../subscribers/view-subscriber-show.php:268
+#: ../template/template-show.php:90
+msgid "Delete"
+msgstr ""
+
+#: ../configuration/configuration-show.php:132
+#: ../sentmail/deliverreport-show.php:75 ../sentmail/sentmail-show.php:126
+#: ../subscribers/view-subscriber-page.php:61
+#: ../template/template-show.php:104
+msgid "No records available."
+msgstr ""
+
+#: ../configuration/configuration-show.php:141
+#: ../sentmail/deliverreport-show.php:87 ../sentmail/sentmail-show.php:138
+msgid " &lt;&lt; "
+msgstr ""
+
+#: ../configuration/configuration-show.php:142
+#: ../sentmail/deliverreport-show.php:88 ../sentmail/sentmail-show.php:139
+msgid " &gt;&gt; "
+msgstr ""
+
+#: ../export/export-email-address.php:39 ../export/export-email-address.php:45
+#: ../export/export-email-address.php:50 ../export/export-email-address.php:55
+msgid "Unexpected url submit has been detected"
+msgstr ""
+
+#: ../job/optin.php:62 ../job/optin.php:72 ../job/unsubscribe.php:61
+#: ../job/unsubscribe.php:71
+msgid ""
+"Oops.. We are getting some technical error. Please try again or contact "
+"admin."
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:19
+msgid "Please select mail configuration."
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:26
+msgid "No email address selected."
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:43
+msgid "Mail sent successfully"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:51
+msgid "Click here for details"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:83
+msgid "Send Mail Manually"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:90
+msgid "Select your mail configuration"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:91
+msgid ""
+"Select a mail configuration from available list. To create please check mail "
+"configuration menu."
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:96
+msgid "Select"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:116
+msgid "Mail count for one shot :"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:128
+#: ../sendmail/sendmail-subscriber.php:129
+msgid "Select email address page"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:149
+msgid "No Subscribers"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:153
+msgid "Check All"
+msgstr ""
+
+#: ../sendmail/sendmail-subscriber.php:154
+msgid "Uncheck All"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:9
+msgid "Oops.. Unexpected error occurred. Please try again."
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:17
+msgid "Mail Delivery Report"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:35 ../sentmail/deliverreport-show.php:45
+#: ../subscribers/view-subscriber-page.php:19
+#: ../subscribers/view-subscriber-show.php:187
+msgid "Email"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:36 ../sentmail/deliverreport-show.php:46
+msgid "Sent Date"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:37 ../sentmail/deliverreport-show.php:47
+msgid "Viewed Status"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:38 ../sentmail/deliverreport-show.php:48
+msgid "Viewed Date"
+msgstr ""
+
+#: ../sentmail/deliverreport-show.php:39 ../sentmail/deliverreport-show.php:49
+#: ../subscribers/view-subscriber-page.php:22
+#: ../subscribers/view-subscriber-page.php:32
+#: ../subscribers/view-subscriber-show.php:190
+#: ../subscribers/view-subscriber-show.php:201
+msgid "Database ID"
+msgstr ""
+
+#: ../sentmail/sentmail-preview.php:17 ../template/template-preview.php:16
+msgid "Preview Template"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:42
+msgid "Successfully deleted all records except latest 20."
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:54
+msgid "Sent Mail"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:72 ../sentmail/sentmail-show.php:84
+msgid "View Reports"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:73 ../sentmail/sentmail-show.php:85
+msgid "Mail Preview"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:74 ../sentmail/sentmail-show.php:86
+msgid "Sent Source"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:75 ../sentmail/sentmail-show.php:87
+msgid "Sent Start Date"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:76 ../sentmail/sentmail-show.php:88
+msgid "Sent End Date"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:77 ../sentmail/sentmail-show.php:89
+msgid "Total Mails"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:78 ../sentmail/sentmail-show.php:90
+#: ../subscribers/view-subscriber-export.php:31
+#: ../subscribers/view-subscriber-export.php:40
+#: ../subscribers/view-subscriber-show.php:191
+#: ../subscribers/view-subscriber-show.php:202
+#: ../template/template-show.php:58 ../template/template-show.php:67
+msgid "Action"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:162 ../sentmail/sentmail-show.php:164
+msgid "Optimize Table"
+msgstr ""
+
+#: ../sentmail/sentmail-show.php:174
+msgid ""
+"Note: Please click <strong>Optimize Table</strong> button to delete all "
+"records except latest 20."
+msgstr ""
+
+#: ../settings/schedule-show.php:7
+msgid "Schedule Newsletter"
+msgstr ""
+
+#: ../settings/schedule-show.php:8
+msgid ""
+"We have plan to add wp_cron feature in the next release. At present I "
+"strongly recommend you to use your server CRON job (cPanel or Plesk) to send "
+"your newsletters. The following link explains how to create a CRON job "
+"through the cPanel or Plesk."
+msgstr ""
+
+#: ../settings/schedule-show.php:9
+msgid "How to setup auto emails (cron job) in Plesk"
+msgstr ""
+
+#: ../settings/schedule-show.php:10
+msgid "How to setup auto emails (cron job) in cPanal"
+msgstr ""
+
+#: ../settings/schedule-show.php:11
+msgid "Hosting doesnt support cron jobs?"
+msgstr ""
+
+#: ../settings/settings-edit.php:81
+msgid "Please enter sender of notifications from name."
+msgstr ""
+
+#: ../settings/settings-edit.php:87
+msgid "Please enter sender of notifications from email."
+msgstr ""
+
+#: ../settings/settings-edit.php:127
+msgid "Details was successfully updated."
+msgstr ""
+
+#: ../settings/settings-edit.php:132
+msgid "Oops, details not update."
+msgstr ""
+
+#: ../settings/settings-edit.php:175
+msgid "Sender of notifications"
+msgstr ""
+
+#: ../settings/settings-edit.php:176
+msgid ""
+"Choose a FROM name and FROM email address for all notifications emails from "
+"this plugin."
+msgstr ""
+
+#: ../settings/settings-edit.php:185
+msgid "Mail type"
+msgstr ""
+
+#: ../settings/settings-edit.php:186
+msgid ""
+"Option 1 & 2 is to send mails with default Wordpress method wp_mail(). "
+"Option 3 & 4 is to send mails with PHP method mail()"
+msgstr ""
+
+#: ../settings/settings-edit.php:200
+msgid "Opt-in option"
+msgstr ""
+
+#: ../settings/settings-edit.php:201
+msgid ""
+"Double Opt In, means subscribers need to confirm their email address by an "
+"activation link sent them on a activation email message. Single Opt In, "
+"means subscribers do not need to confirm their email address."
+msgstr ""
+
+#: ../settings/settings-edit.php:212
+msgid "Opt-in mail subject (Confirmation mail)"
+msgstr ""
+
+#: ../settings/settings-edit.php:213
+msgid ""
+"Enter the subject for Double Opt In mail. This will send whenever subscriber "
+"added email into our database."
+msgstr ""
+
+#: ../settings/settings-edit.php:219
+msgid "Opt-in mail content (Confirmation mail)"
+msgstr ""
+
+#: ../settings/settings-edit.php:220
+msgid ""
+"Enter the content for Double Opt In mail. This will send whenever subscriber "
+"added email into our database."
+msgstr ""
+
+#: ../settings/settings-edit.php:226
+msgid "Opt-in link (Confirmation link)"
+msgstr ""
+
+#: ../settings/settings-edit.php:227
+msgid "Double Opt In confirmation link. You no need to change this value."
+msgstr ""
+
+#: ../settings/settings-edit.php:233
+msgid "Text to display after email subscribed successfully"
+msgstr ""
+
+#: ../settings/settings-edit.php:234
+msgid ""
+"This text will display once user clicked email confirmation link from opt-in "
+"(confirmation) email content."
+msgstr ""
+
+#: ../settings/settings-edit.php:241
+msgid "Subscriber welcome email"
+msgstr ""
+
+#: ../settings/settings-edit.php:242
+msgid "To send welcome mail to subscriber, This option must be set to YES."
+msgstr ""
+
+#: ../settings/settings-edit.php:253
+msgid "Welcome mail subject"
+msgstr ""
+
+#: ../settings/settings-edit.php:254
+msgid ""
+"Enter the subject for subscriber welcome mail. This will send whenever email "
+"subscribed (confirmed) successfully."
+msgstr ""
+
+#: ../settings/settings-edit.php:260
+msgid "Subscriber welcome mail content"
+msgstr ""
+
+#: ../settings/settings-edit.php:261
+msgid ""
+"Enter the content for subscriber welcome mail. This will send whenever email "
+"subscribed (confirmed) successfully."
+msgstr ""
+
+#: ../settings/settings-edit.php:269
+msgid "Mail to admin"
+msgstr ""
+
+#: ../settings/settings-edit.php:270
+msgid ""
+"To send admin notifications for new subscriber, This option must be set to "
+"YES."
+msgstr ""
+
+#: ../settings/settings-edit.php:281
+msgid "Admin email addresses"
+msgstr ""
+
+#: ../settings/settings-edit.php:282
+msgid ""
+"Enter the admin email addresses that should receive notifications (separate "
+"by comma)."
+msgstr ""
+
+#: ../settings/settings-edit.php:288
+msgid "Admin mail subject"
+msgstr ""
+
+#: ../settings/settings-edit.php:289
+msgid ""
+"Enter the subject for admin mail. This will send whenever new email added "
+"and confirmed into our database."
+msgstr ""
+
+#: ../settings/settings-edit.php:295
+msgid "Admin mail content"
+msgstr ""
+
+#: ../settings/settings-edit.php:296
+msgid ""
+"Enter the mail content for admin. This will send whenever new email added "
+"and confirmed into our database."
+msgstr ""
+
+#: ../settings/settings-edit.php:303
+msgid "Unsubscribe link"
+msgstr ""
+
+#: ../settings/settings-edit.php:304
+msgid "Unsubscribe link. You no need to change this value."
+msgstr ""
+
+#: ../settings/settings-edit.php:310
+msgid "Unsubscribe text in mail"
+msgstr ""
+
+#: ../settings/settings-edit.php:311
+msgid ""
+"Enter the text for unsubscribe link. This text is to add unsubscribe link "
+"with newsletter."
+msgstr ""
+
+#: ../settings/settings-edit.php:317
+msgid "Text to display after email unsubscribed"
+msgstr ""
+
+#: ../settings/settings-edit.php:318
+msgid ""
+"This text will display once user clicked unsubscribed link from our "
+"newsletter."
+msgstr ""
+
+#: ../settings/settings-edit.php:325
+msgid "Message 1"
+msgstr ""
+
+#: ../settings/settings-edit.php:326
+msgid "Default message to display if any issue on confirmation link."
+msgstr ""
+
+#: ../settings/settings-edit.php:332
+msgid "Message 2"
+msgstr ""
+
+#: ../settings/settings-edit.php:333
+msgid "Default message to display if any issue on unsubscribe link."
+msgstr ""
+
+#: ../settings/settings-edit.php:343
+msgid "Save Settings"
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:25
+#: ../subscribers/view-subscriber-edit.php:40
+msgid "Please enter valid email."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:37
+msgid "Email was successfully inserted."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:41
+msgid "Email already exist in our list."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:46
+msgid "Email is invalid."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:86
+msgid "Add email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:88
+#: ../subscribers/view-subscriber-edit.php:83
+msgid "Enter full name"
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:90
+#: ../subscribers/view-subscriber-edit.php:85
+msgid "Enter the name for email."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:92
+#: ../subscribers/view-subscriber-edit.php:87
+msgid "Enter email address."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:94
+#: ../subscribers/view-subscriber-edit.php:89
+msgid "Enter the email address to add in the subscribers list."
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:96
+#: ../subscribers/view-subscriber-edit.php:91
+#: ../subscribers/view-subscriber-page.php:21
+#: ../subscribers/view-subscriber-page.php:31
+#: ../subscribers/view-subscriber-show.php:189
+#: ../subscribers/view-subscriber-show.php:200
+msgid "Status"
+msgstr ""
+
+#: ../subscribers/view-subscriber-add.php:103
+#: ../subscribers/view-subscriber-edit.php:98
+msgid "Unsubscribed, Unconfirmed emails not display in send mail page."
+msgstr ""
+
+#: ../subscribers/view-subscriber-edit.php:52
+msgid "Email was successfully updated."
+msgstr ""
+
+#: ../subscribers/view-subscriber-edit.php:81
+msgid "Edit email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:22
+msgid "Export email address in csv format"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:28
+#: ../subscribers/view-subscriber-export.php:37
+#: ../subscribers/view-subscriber-page.php:18
+#: ../subscribers/view-subscriber-page.php:28
+#: ../subscribers/view-subscriber-show.php:186
+#: ../subscribers/view-subscriber-show.php:197
+msgid "Sno"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:29
+#: ../subscribers/view-subscriber-export.php:38
+msgid "Export option"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:30
+#: ../subscribers/view-subscriber-export.php:39
+msgid "Total email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:47
+msgid "Subscriber email address"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:49
+#: ../subscribers/view-subscriber-export.php:56
+#: ../subscribers/view-subscriber-export.php:63
+msgid "Click to export csv"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:54
+msgid "Registered email address"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:61
+msgid "Comments author email address"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:70
+msgid "Add Email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-export.php:71
+#: ../subscribers/view-subscriber-show.php:176
+#: ../subscribers/view-subscriber-show.php:275
+msgid "Import Email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:74
+msgid "Email(s) was successfully imported."
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:75
+msgid "Email(s) are already in our database."
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:76
+msgid "Email(s) are invalid."
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:86
+msgid "File upload failed or no data available in the csv file."
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:120
+msgid "Upload email"
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:121
+msgid "Select csv file"
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:123
+msgid ""
+"Please select the input csv file. Please check official website for csv "
+"structure."
+msgstr ""
+
+#: ../subscribers/view-subscriber-import.php:128
+msgid "Upload CSV"
+msgstr ""
+
+#: ../subscribers/view-subscriber-page.php:13
+#: ../subscribers/view-subscriber-show.php:155
+msgid "View subscriber"
+msgstr ""
+
+#: ../subscribers/view-subscriber-page.php:20
+#: ../subscribers/view-subscriber-page.php:30
+#: ../subscribers/view-subscriber-show.php:188
+#: ../subscribers/view-subscriber-show.php:199
+msgid "Name"
+msgstr ""
+
+#: ../subscribers/view-subscriber-page.php:29
+#: ../subscribers/view-subscriber-show.php:198
+msgid "Email address"
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:48
+#: ../subscribers/view-subscriber-show.php:101
+msgid ""
+"To send confirmation mail, Please change the Opt-in option to Double Opt In."
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:57
+msgid "Confirmation email resent successfully."
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:86
+#: ../subscribers/view-subscriber-show.php:132
+msgid "Oops, No record was selected."
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:126
+msgid "Confirmation email(s) resent successfully."
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:177
+#: ../subscribers/view-subscriber-show.php:276
+msgid "Export Email (CSV)"
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:236
+#: ../subscribers/view-subscriber-show.php:269
+msgid "Resend Confirmation"
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:252
+msgid ""
+"No records available. Please use the above alphabet search button to search."
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:267
+msgid "Bulk Actions"
+msgstr ""
+
+#: ../subscribers/view-subscriber-show.php:271
+msgid "Apply"
+msgstr ""
+
+#: ../template/template-add.php:26 ../template/template-edit.php:39
+msgid "Please enter template heading."
+msgstr ""
+
+#: ../template/template-add.php:44
+msgid "Template was successfully created."
+msgstr ""
+
+#: ../template/template-add.php:80
+msgid "Create Template"
+msgstr ""
+
+#: ../template/template-add.php:83 ../template/template-edit.php:90
+msgid "Enter template heading."
+msgstr ""
+
+#: ../template/template-add.php:85 ../template/template-edit.php:92
+msgid "Please enter your email subject."
+msgstr ""
+
+#: ../template/template-add.php:87 ../template/template-edit.php:94
+msgid "Template header"
+msgstr ""
+
+#: ../template/template-add.php:90 ../template/template-edit.php:97
+msgid "Please create header portion for your template."
+msgstr ""
+
+#: ../template/template-add.php:92 ../template/template-edit.php:99
+msgid "Template body"
+msgstr ""
+
+#: ../template/template-add.php:95 ../template/template-edit.php:102
+msgid "Please create body portion for your template."
+msgstr ""
+
+#: ../template/template-add.php:98 ../template/template-edit.php:105
+msgid "Template footer"
+msgstr ""
+
+#: ../template/template-add.php:101 ../template/template-edit.php:108
+msgid "Please create footer portion for your template."
+msgstr ""
+
+#: ../template/template-edit.php:55
+msgid "Template was successfully updated."
+msgstr ""
+
+#: ../template/template-edit.php:87
+msgid "Edit Template"
+msgstr ""
+
+#: ../template/template-show.php:44
+msgid "Mail Template"
+msgstr ""
+
+#: ../template/template-show.php:56
+msgid "Template Heading"
+msgstr ""
+
+#: ../template/template-show.php:57 ../template/template-show.php:66
+msgid "Type"
+msgstr ""
+
+#: ../template/template-show.php:65
+msgid "Email subject"
+msgstr "மின்னஞ்சல் தலைப்பு"
+
+#: ../template/template-show.php:114
+msgid "Create New Template"
+msgstr "உருவாக்கு"
