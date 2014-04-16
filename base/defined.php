@@ -11,7 +11,7 @@ if(!defined('ELP_PLG_DIR')) define('ELP_PLG_DIR', dirname($elp_current_folder).D
 if(!defined('ELP_DIR')) define('ELP_DIR', $elp_current_folder.DS);
 if(!defined('ELP_URL')) define('ELP_URL',plugins_url().'/'.strtolower('email-posts-to-subscribers').'/');
 define('ELP_FILE',ELP_DIR.'email-posts-to-subscribers.php');
-if(!defined('ELP_FAV')) define('ELP_FAV', 'http://www.gopiplus.com/work/');
+if(!defined('ELP_FAV')) define('ELP_FAV', 'http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/');
 if(!defined('ELP_ADMINURL')) define('ELP_ADMINURL', get_option('siteurl') . '/wp-admin/admin.php');
 define('ELP_OFFICIAL', 'Check official website for more information <a target="_blank" href="'.ELP_FAV.'">click here</a>');
 global $elp_altmsg;

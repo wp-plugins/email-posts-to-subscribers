@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
-Tested up to: 3.8.1
-Stable tag: 1.2
+Tested up to: 3.9
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,11 +56,11 @@ Installation Instruction and Configuration [Installation Instruction and Configu
 
 = Q5. How to add subscription box in posts? =
 
-= Q6. How to modify the existing mails (Opt-in mail, Welcome mail, Admin mails) content? =
+= Q6. How to modify the existing mail (Opt-in mail, Welcome mail, Admin mail) content? =
 
 = Q7. How to schedule cron job? =
 
-= Q8. Hosting doesn’t support cron jobs? =
+= Q8. Hosting doesnt support cron jobs? =
 
 = Q9. How to filter posts category in the newsletter? =
 
@@ -87,7 +87,7 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 
 = 1.0 =
 
-* First version
+1. First version
 
 = 1.1 =
 
@@ -99,13 +99,18 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 
 = 1.2 =
 
-Minor change in the register.php class
+1. Minor change in the register.php class
+
+= 1.3 =
+
+1. Tested up to 3.9
+2. New link updated for documentation.
 
 == Upgrade Notice ==
 
 = 1.0 =
 
-First version
+1. First version
 
 = 1.1 =
 
@@ -117,4 +122,9 @@ First version
 
 = 1.2 =
 
-Minor change in the register.php class
+1. Minor change in the register.php class
+
+= 1.3 =
+
+1. Tested up to 3.9
+2. New link updated for documentation.

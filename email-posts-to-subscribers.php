@@ -3,7 +3,7 @@
 Plugin Name: Email posts to subscribers
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Description: The aim of this plugin is One Time Configuration and Life Time Newsletter. This plugin generate a newsletter with the latest available posts in the blog and send to your subscriber. We can easily schedule the newsletter daily, weekly or monthly. 6 default templates available with this plugin also admin can create the templates using visual editor.
-Version: 1.2
+Version: 1.3
 Author: Gopi Ramasamy
 Donate link: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
