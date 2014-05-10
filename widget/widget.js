@@ -57,7 +57,7 @@ function elp_submit_request(url, parameters)
 		alert('Cannot create XMLHTTP instance');
 		return false;
 	}
-	http_req.onreadystatechange = eemail_submitresult;
+	http_req.onreadystatechange = elp_submitresult;
 	http_req.open('POST', url, true);
 	http_req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	http_req.setRequestHeader("Content-length", parameters.length);
@@ -65,7 +65,7 @@ function elp_submit_request(url, parameters)
 	http_req.send(parameters);
 }
 
-function eemail_submitresult() 
+function elp_submitresult() 
 {
 	//alert(http_req.readyState);
 	//alert(http_req.responseText); 
@@ -84,8 +84,8 @@ function eemail_submitresult()
 				{
 					alert('You have successfully subscribed to the newsletter. You will receive a confirmation email in few minutes. Please follow the link in it to confirm your subscription. If the email takes more than 15 minutes to appear in your mailbox, please check your spam folder.');
 					document.getElementById("elp_msg").innerHTML = "Subscribed successfully.";
-					document.getElementById("elp_txt_email").value="";
-					document.getElementById("elp_txt_name").value="";
+					document.getElementById("elp_txt_email").value = "";
+					document.getElementById("elp_txt_name").value = "";
 				}
 				else if((http_req.responseText).trim() == "already-exist")
 				{

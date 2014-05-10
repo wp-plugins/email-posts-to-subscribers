@@ -182,7 +182,8 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
       <table width="100%" class="widefat" id="straymanage">
         <thead>
           <tr>
-            <th class="check-column" scope="col"><input type="checkbox" name="chk_delete[]" id="chk_delete[]" /></th>
+            <th class="check-column" scope="col">
+			<input type="checkbox" name="elp_checkall" id="elp_checkall" onClick="_elp_checkall('frm_elp_display', 'chk_delete[]', this.checked);" /></th>
             <th scope="col"><?php _e('Sno', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Email', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Name', ELP_TDOMAIN); ?></th>
@@ -193,7 +194,8 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
         </thead>
         <tfoot>
           <tr>
-            <th class="check-column" scope="col"><input type="checkbox" name="chk_delete[]" id="chk_delete[]" /></th>
+            <th class="check-column" scope="col">
+			<input type="checkbox" name="elp_checkall" id="elp_checkall" onClick="_elp_checkall('frm_elp_display', 'chk_delete[]', this.checked);" /></th>
             <th scope="col"><?php _e('Sno', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Email address', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Name', ELP_TDOMAIN); ?></th>

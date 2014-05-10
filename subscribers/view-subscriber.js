@@ -59,6 +59,14 @@ function _elp_bulkaction()
 				document.frm_elp_display.action="admin.php?page=elp-view-subscribers&bulkaction=delete&search=" + searchquery;
 				document.frm_elp_display.submit();
 			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
 		}
 	}
 	else if(document.frm_elp_display.action.value == "resend")
@@ -70,6 +78,10 @@ function _elp_bulkaction()
 			document.frm_elp_display.action="admin.php?page=elp-view-subscribers&bulkaction=resend&search=" + searchquery;
 			document.frm_elp_display.submit();
 		}
+		else
+		{
+			return false;
+		}
 	}
 }
 
@@ -79,6 +91,10 @@ function _elp_exportcsv(url, option)
 	{
 		document.frm_elp_subscriberexport.action= url+"&option="+option;
 		document.frm_elp_subscriberexport.submit();
+	}
+	else
+	{
+		return false;
 	}
 }
 
@@ -95,4 +111,20 @@ function _elp_importemail()
         alert('Please select only csv file. \nPlease check official website for csv structure.');
         return false;
     }
+}
+
+function _elp_checkall(FormName, FieldName, CheckValue)
+{
+	if(!document.forms[FormName])
+		return;
+	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+	if(!objCheckBoxes)
+		return;
+	var countCheckBoxes = objCheckBoxes.length;
+	if(!countCheckBoxes)
+		objCheckBoxes.checked = CheckValue;
+	else
+		// set the check value for all check boxes
+		for(var i = 0; i < countCheckBoxes; i++)
+			objCheckBoxes[i].checked = CheckValue;
 }

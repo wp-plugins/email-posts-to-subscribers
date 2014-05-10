@@ -30,3 +30,9 @@ Minor change in the register.php class
 
 Tested up to 3.9
 New link updated for documentation.
+
+********************************Version 1.4************************************************************
+
+1. Small javascript issue fixed in the admin end.
+2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
+3. Short code overlapping issue fixed.

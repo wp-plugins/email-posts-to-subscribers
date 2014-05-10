@@ -20,11 +20,46 @@ function elp_shortcode( $atts )
 	$elp_name = isset($atts['namefield']) ? $atts['namefield'] : 'YES';
 	$elp_desc = isset($atts['desc']) ? $atts['desc'] : '';
 	
-	$arr = array();
-	$arr["elp_title"] 	= "";
-	$arr["elp_desc"] 	= $elp_desc;
-	$arr["elp_name"] 	= $elp_name;
-	require_once(ELP_DIR.'widget'.DIRECTORY_SEPARATOR.'widget.php');
+	$elp_name = trim($elp_name);
+	$elp_desc = trim($elp_desc);
+	
+	$url = "'" . home_url() . "'";
+	$elp = "";
+		
+	global $elp_includes;
+	if (!isset($elp_includes) || $elp_includes !== true) 
+	{ 
+		$elp_includes = true;
+		$elp = $elp . '<link rel="stylesheet" media="screen" type="text/css" href="'.ELP_URL.'widget/widget.css" />';
+		$elp = $elp . '<script language="javascript" type="text/javascript" src="'.ELP_URL.'widget/widget.js"></script>';
+	} 
+		
+	$elp = $elp . '<div>';
+	if( $elp_desc <> "" )
+	{
+		$elp = $elp . '<div class="elp_caption">'.$elp_desc.'</div>';
+	}
+	$elp = $elp . '<div class="elp_msg"><span id="elp_msg"></span></div>';
+	if( $elp_name == "YES" )
+	{
+		$elp = $elp . '<div class="elp_lablebox">Name</div>';
+		$elp = $elp . '<div class="elp_textbox">';
+			$elp = $elp . '<input class="elp_textbox_class" name="elp_txt_name" id="elp_txt_name" value="" maxlength="225" type="text">';
+		$elp = $elp . '</div>';
+	}
+	$elp = $elp . '<div class="elp_lablebox">Email *</div>';
+	$elp = $elp . '<div class="elp_textbox">';
+		$elp = $elp . '<input class="elp_textbox_class" name="elp_txt_email" id="elp_txt_email" onkeypress="if(event.keyCode==13) elp_submit_page('.$url.')" value="" maxlength="225" type="text">';
+	$elp = $elp . '</div>';
+	$elp = $elp . '<div class="elp_button">';
+		$elp = $elp . '<input class="elp_textbox_button" name="elp_txt_button" id="elp_txt_button" onClick="return elp_submit_page('.$url.')" value="Subscribe" type="button">';
+	$elp = $elp . '</div>';
+	if( $elp_name != "YES" )
+	{
+		$elp = $elp . '<input name="elp_txt_name" id="elp_txt_name" value="" type="hidden">';
+	}
+	$elp = $elp . '</div>';
+	return $elp;
 }
 
 function elp_subbox( $elp_name = "YES", $elp_desc = "" )

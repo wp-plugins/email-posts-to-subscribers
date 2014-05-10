@@ -3,9 +3,17 @@
 $elp_name = trim($arr['elp_name']);
 $elp_desc = trim($arr['elp_desc']);
 $url = home_url();
+
+global $elp_includes;
+if (!isset($elp_includes) || $elp_includes !== true) 
+{ 
+	$elp_includes = true;
+	?>
+	<script language="javascript" type="text/javascript" src="<?php echo ELP_URL; ?>widget/widget.js"></script>
+	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo ELP_URL; ?>widget/widget.css" />
+	<?php
+	}
 ?>
-<script language="javascript" type="text/javascript" src="<?php echo ELP_URL; ?>widget/widget.js"></script>
-<link rel="stylesheet" media="screen" type="text/css" href="<?php echo ELP_URL; ?>widget/widget.css" />
 <div>
 	<?php if( $elp_desc <> "" ) { ?>
 	<div class="elp_caption"><?php echo $elp_desc; ?></div>

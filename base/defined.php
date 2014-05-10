@@ -15,4 +15,5 @@ if(!defined('ELP_FAV')) define('ELP_FAV', 'http://www.gopiplus.com/work/2014/03/
 if(!defined('ELP_ADMINURL')) define('ELP_ADMINURL', get_option('siteurl') . '/wp-admin/admin.php');
 define('ELP_OFFICIAL', 'Check official website for more information <a target="_blank" href="'.ELP_FAV.'">click here</a>');
 global $elp_altmsg;
+global $elp_includes;
 ?>

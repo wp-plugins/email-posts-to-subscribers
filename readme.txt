@@ -6,7 +6,7 @@ Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
 Tested up to: 3.9
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,8 +25,9 @@ The aim of this plugin is One Time Configuration and Life Time Newsletter to sub
 
 This plugin have subscription box and it allows users to publicly subscribe by submitting their email address. You can add subscriptions box to your sidebar (use widget). posts (use short code) and theme file (use php code).
 
-Plugin Features:
+Please use my Email Subscriber plugin if you want to send notification email to subscribers when new posts are published to your blog.
 
+= Plugin Features: =
 *   Subscription box for widget. And short code option for posts and pages.
 *   Double opt-in and single opt-in facility for subscriber
 *   Send subscription confirmation mail to user and admin (Optional).
@@ -38,6 +39,21 @@ Plugin Features:
 *   Options to schedule auto mail for newsletters
 *   Options to check newsletter status and when it was viewed.
 *   Tinymce visual editor for newsletter theme creation.
+
+= Frequently Asked Questions: =
+
+*   Q1. What are all the steps to do after plugin activation?
+*   Q2. How to setup subscription box widget?
+*   Q3. How to import and export email address to subscriber list?
+*   Q4. How to create/modify the template?
+*   Q5. How to add subscription box in posts?
+*   Q6. How to modify the existing mail (Opt-in mail, Welcome mail, Admin mail) content?
+*   Q7. How to schedule cron job?
+*   Q8. Hosting doesnt support cron jobs?
+*   Q9. How to filter posts category in the newsletter?
+*   Q10. How to configure number of emails send per day?
+*   Q11. How to send newsletter manually?
+*   Q12. Where to check sent mails?
 
 == Installation ==
 
@@ -106,6 +122,12 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 1. Tested up to 3.9
 2. New link updated for documentation.
 
+= 1.4 =
+
+1. Small javascript issue fixed in the admin end.
+2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
+3. Short code overlapping issue fixed.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -128,3 +150,9 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 
 1. Tested up to 3.9
 2. New link updated for documentation.
+
+= 1.4 =
+
+1. Small javascript issue fixed in the admin end.
+2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
+3. Short code overlapping issue fixed.

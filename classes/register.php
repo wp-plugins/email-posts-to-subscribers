@@ -25,12 +25,6 @@ class elp_cls_registerhook
         foreach($queries as $qry)
 		{
             $wpdb->query($qry);
-            //$error = mysql_error( $wpdb->dbh );
-            //if($error)
-			//{
-				////$errors[] = __(mysql_error(), ELP_TDOMAIN);
-                //$has_errors=true;
-            //}
         }
 		
 		// list the tables that haven't been created
@@ -74,7 +68,7 @@ class elp_cls_registerhook
 	public static function elp_adminmenu()
 	{
 		add_menu_page( __( 'Email Posts', ELP_TDOMAIN ), 
-			__( 'Email Posts', ELP_TDOMAIN ), 'admin_dashboard', 'email-post', 'elp_admin_option', ELP_URL.'images/mail.png', 51 );
+			__( 'Email Posts', ELP_TDOMAIN ), 'admin_dashboard', 'email-post', 'elp_admin_option', ELP_URL.'images/mail.png', 53 );
 			
 		add_submenu_page('email-post', __( 'Subscribers', ELP_TDOMAIN ), 
 			__( 'Subscribers', ELP_TDOMAIN ), 'administrator', 'elp-view-subscribers', array( 'elp_cls_intermediate', 'elp_subscribers' ));
