@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 1.4
+Tested up to: 3.9.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ This plugin have subscription box and it allows users to publicly subscribe by s
 Please use my Email Subscriber plugin if you want to send notification email to subscribers when new posts are published to your blog.
 
 = Plugin Features: =
+
 *   Subscription box for widget. And short code option for posts and pages.
 *   Double opt-in and single opt-in facility for subscriber
 *   Send subscription confirmation mail to user and admin (Optional).
@@ -62,29 +63,29 @@ Installation Instruction and Configuration [Installation Instruction and Configu
 
 == Frequently Asked Questions ==
 
-= Q1. What are all the steps to do after plugin activation? =
+Q1. What are all the steps to do after plugin activation?
 
-= Q2. How to setup subscription box widget? =
+Q2. How to setup subscription box widget?
 
-= Q3. How to import and export email address to subscriber list? =
+Q3. How to import and export email address to subscriber list?
 
-= Q4. How to create/modify the template? =
+Q4. How to create/modify the template?
 
-= Q5. How to add subscription box in posts? =
+Q5. How to add subscription box in posts?
 
-= Q6. How to modify the existing mail (Opt-in mail, Welcome mail, Admin mail) content? =
+Q6. How to modify the existing mail (Opt-in mail, Welcome mail, Admin mail) content?
 
-= Q7. How to schedule cron job? =
+Q7. How to schedule cron job?
 
-= Q8. Hosting doesnt support cron jobs? =
+Q8. Hosting doesnt support cron jobs?
 
-= Q9. How to filter posts category in the newsletter? =
+Q9. How to filter posts category in the newsletter?
 
-= Q10. How to configure number of emails send per day? =
+Q10. How to configure number of emails send per day?
 
-= Q11. How to send newsletter manually? =
+Q11. How to send newsletter manually?
 
-= Q12. Where to check sent mails? =
+Q12. Where to check sent mails?
 
 FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/]
 (http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/)
@@ -128,6 +129,12 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
 3. Short code overlapping issue fixed.
 
+= 1.5 =
+
+1. Full post keyword (###POSTFULL###) added in the Template Compose page. Now using this keyword we can add full post in the newsletter.
+2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select single post in the newsletter). With this option we can create Mail Configuration for 1 post.
+3. Formatted some mail content.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -156,3 +163,9 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 1. Small javascript issue fixed in the admin end.
 2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
 3. Short code overlapping issue fixed.
+
+= 1.5 =
+
+1. Full post keyword (###POSTFULL###) added in the Template Compose page. Now using this keyword we can add full post in the newsletter.
+2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select single post in the newsletter). With this option we can create Mail Configuration for 1 post.
+3. Formatted some mail content.

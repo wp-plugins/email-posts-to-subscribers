@@ -93,7 +93,7 @@ if ($elp_error_found == FALSE && strlen($elp_success) > 0)
 	  <?php $settings_body = array( 'textarea_rows' => 10 ); ?>
       <?php wp_editor("", "elp_templ_body", $settings_body);?>
       <p><?php _e('Please create body portion for your template.', ELP_TDOMAIN); ?>
-	  Keywords: ###POSTTITLE###, ###POSTIMAGE###, ###POSTDESC###, ###EMAIL###, ###DATE###, ###AUTHOR###</p>
+	  Keywords: ###POSTTITLE###, ###POSTIMAGE###, ###POSTDESC###, ###EMAIL###, ###DATE###, ###AUTHOR###, ###POSTFULL###</p>
 	  
 	  <label for="tag-link"><?php _e('Template footer', ELP_TDOMAIN); ?></label>
 	  <?php $settings_footer = array( 'textarea_rows' => 4 ); ?>

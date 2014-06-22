@@ -122,6 +122,7 @@ if ($elp_error_found == FALSE && strlen($elp_success) > 0)
 	  <h3><?php _e('Post Details', ELP_TDOMAIN); ?></h3>
 	  <label for="tag-image"><?php _e('Post count.', ELP_TDOMAIN); ?></label>
       <select name="elp_set_postcount" id="elp_set_postcount">
+		<option value='1' <?php if($form['elp_set_postcount']=='1') { echo 'selected="selected"' ; } ?>>1</option>
 		<option value='2' <?php if($form['elp_set_postcount']=='2') { echo 'selected="selected"' ; } ?>>2</option>
 		<option value='3' <?php if($form['elp_set_postcount']=='3') { echo 'selected="selected"' ; } ?>>3</option>
 		<option value='5' <?php if($form['elp_set_postcount']=='5') { echo 'selected="selected"' ; } ?>>5</option>

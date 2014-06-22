@@ -83,6 +83,15 @@ class elp_cls_dbinsert
 			$sSql = $wpdb->prepare("INSERT INTO `".$prefix."elp_templatetable` (`elp_templ_heading`,`elp_templ_header`, `elp_templ_body`, `elp_templ_footer`, `elp_templ_status`)
 					VALUES(%s, %s, %s, %s, %s)", array($elp_templ_heading, $elp_templ_header, $elp_templ_body, $elp_templ_footer, 'Ready'));
 			$wpdb->query($sSql);
+			
+			$elp_templ_heading = "Template 9 (Classic template 3)";
+			$elp_templ_header = '<div style="background-color:#E6E6E6;padding:20px;width:700px;text-align:center;"><div style="padding-bottom:5px;text-align:left;border-bottom: 10px solid #222222;"><img src="http://www.gopiplus.com/work/wp-content/uploads/email-posts-to-subscribers/template/gopiplus.png"></div>';
+			$elp_templ_body = '<div style="background-color:#FFFFFF;padding:10px;text-align:left;"><div style="font-family:Verdana;font-size:15px;font-weight:bold;color:#222222;">###POSTTITLE###</div><br>###POSTFULL###</div>';
+			$elp_templ_footer = '<div style="padding:10px;">This email was intended for ###NAME### (###EMAIL###) <br> &copy; 2009 - 2014, www.gopiplus. 2029 ABCD St. Mountain View, CA 111111, USA </div></div>';
+			
+			$sSql = $wpdb->prepare("INSERT INTO `".$prefix."elp_templatetable` (`elp_templ_heading`,`elp_templ_header`, `elp_templ_body`, `elp_templ_footer`, `elp_templ_status`)
+					VALUES(%s, %s, %s, %s, %s)", array($elp_templ_heading, $elp_templ_header, $elp_templ_body, $elp_templ_footer, 'Ready'));
+			$wpdb->query($sSql);
 		}
 		return true;
 	}
@@ -206,6 +215,22 @@ class elp_cls_dbinsert
 			$elp_set_templid = 6;
 			$elp_set_totalsent = "25";
 			$elp_set_postcount = 12;
+			$elp_set_postcategory = "";
+			
+			$sSql = $wpdb->prepare("INSERT INTO `".$prefix."elp_sendsetting` 
+					(`elp_set_guid`,`elp_set_name`, `elp_set_templid`, `elp_set_totalsent`, `elp_set_unsubscribelink`, `elp_set_viewstatus`, 
+					`elp_set_postcount`, `elp_set_postcategory`, `elp_set_postorderby`, `elp_set_postorder`)
+					VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+					array($elp_set_guid, $elp_set_name, $elp_set_templid, $elp_set_totalsent, 
+					$elp_set_unsubscribelink, $elp_set_viewstatus, $elp_set_postcount, $elp_set_postcategory, $elp_set_postorderby, $elp_set_postorder));
+		
+			$wpdb->query($sSql);
+			
+			$elp_set_guid = elp_cls_common::elp_generate_guid(60);
+			$elp_set_name = "Send Latest 1 Post (Full Post) with Template 9";
+			$elp_set_templid = 9;
+			$elp_set_totalsent = "25";
+			$elp_set_postcount = 1;
 			$elp_set_postcategory = "";
 			
 			$sSql = $wpdb->prepare("INSERT INTO `".$prefix."elp_sendsetting` 

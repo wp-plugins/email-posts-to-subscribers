@@ -120,7 +120,8 @@ if ($elp_error_found == FALSE && isset($elp_success[0]) == TRUE)
 	  <h3><?php _e('Post Details', ELP_TDOMAIN); ?></h3>
 	  <label for="tag-image"><?php _e('Post count.', ELP_TDOMAIN); ?></label>
       <select name="elp_set_postcount" id="elp_set_postcount">
-	 	<option value='2'>2</option>
+	 	<option value='1'>1</option>
+		<option value='2'>2</option>
 		<option value='3'>3</option>
 		<option value='5' selected="selected">5</option>
 		<option value='7'>7</option>

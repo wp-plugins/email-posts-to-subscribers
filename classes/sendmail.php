@@ -234,7 +234,7 @@ class elp_cls_sendmail
 						
 						if ( $form['elp_c_mailtype'] == "WP HTML MAIL" || $form['elp_c_mailtype'] == "PHP HTML MAIL" )
 						{
-							$content_send = nl2br($content_send);
+							//$content_send = nl2br($content_send);
 						}
 						else
 						{

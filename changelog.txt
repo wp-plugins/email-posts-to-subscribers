@@ -36,3 +36,11 @@ New link updated for documentation.
 1. Small javascript issue fixed in the admin end.
 2. Subscriber admin page, Check ALL & Uncheck All bug fixed.
 3. Short code overlapping issue fixed.
+
+********************************Version 1.5************************************************************
+
+1. Full post keyword (###POSTFULL###) added in the Template Compose page. Now using this keyword we can 
+add full post in the newsletter.
+2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select 
+single post in the newsletter). With this option we can create Mail Configuration for 1 post.
+3. Formatted some mail content.

@@ -21,6 +21,12 @@ class elp_cls_newsletter
 			$elp_templ_footer = stripslashes($arrRes['elp_templ_footer']);
 			$elp_templ_status = $arrRes['elp_templ_status'];
 			
+			$replacefrom = array("<ul><br />", "</ul><br />", "<li><br />", "</li><br />", "<ol><br />", "</ol><br />", "</h2><br />", "</h1><br />", "</h3><br />");
+			$replaceto = array("<ul>", "</ul>", "<li>" ,"</li>", "<ol>", "</ol>", "</h2>", "</h1>", "</h3>");
+			
+			$replacefrom1 = array("<ul><br>", "</ul><br>", "<li><br>", "</li><br>", "<ol><br>", "</ol><br>", "</h2><br>", "</h1><br>", "</h3><br>", "<br>");
+			$replaceto1 = array("<ul>", "</ul>", "<li>" ,"</li>", "<ol>", "</ol>", "</h2>", "</h1>", "</h3>", "");
+		
 			//$preview = "<html>";
 			//$preview = $preview . "<head><title>" . $elp_templ_heading . "</title></head>";
 			//$preview = $preview . "<body>";
@@ -48,7 +54,15 @@ class elp_cls_newsletter
 				$post_title = $post->post_title;
 				$post_author = get_the_author();
 				$post_date = $post->post_modified;
+				
+				// Get full post
+				$post_full = $post->post_content;
+				$post_full = str_replace($replacefrom, $replaceto, $post_full);
+				$post_full = str_replace($replacefrom1, $replaceto1, $post_full);
+				$post_full = wpautop($post_full);
+				
 				$post_excerpt = elp_cls_newsletter::elp_excerpt_by_id($post_id, $excerpt_length);
+				$post_excerpt = wpautop($post_excerpt);
 				$post_link = get_permalink($post_id);	
 					
 				if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail($post_id)))
@@ -69,12 +83,15 @@ class elp_cls_newsletter
 				$bodyown = str_replace('###POSTTITLE###', $post_title, $body);
 				$bodyown = str_replace('###POSTIMAGE###', $post_thumbnail_link, $bodyown);
 				$bodyown = str_replace('###POSTDESC###', $post_excerpt, $bodyown);
+				$bodyown = str_replace('###POSTFULL###', $post_full, $bodyown);
 				$bodyown = str_replace('###DATE###', $post_date, $bodyown);
 				$bodyown = str_replace('###AUTHOR###', $post_author, $bodyown);
 				
 				//$preview = $preview . '<div style="clear:both;"></div>';
 				$preview = $preview . $bodyown;
 				$preview = $preview . '<div style="clear:both;"></div>';
+				
+				
 				
 				$post_id  = "";
 				$post_title  = "";
@@ -102,6 +119,8 @@ class elp_cls_newsletter
 			//$preview = $preview . "</html>";
 			$preview = str_replace("\r\n", "<br />", $preview);
 		}
+		$preview = str_replace($replacefrom, $replaceto, $preview);
+		$preview = str_replace($replacefrom1, $replaceto1, $preview);
 		return $preview;
 	}
 	
