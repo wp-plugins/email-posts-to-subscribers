@@ -46,21 +46,30 @@ if(isset($_GET['elp']))
 		
 		if($noerror)
 		{
-			$result = elp_cls_dbquery::elp_view_subscriber_job("Confirmed", $form['db'], $form['guid'], $form['email']);
-			if($result)
+			$resultcheck = elp_cls_dbquery::elp_view_subscriber_jobstatus("Confirmed", $form['db'], $form['guid'], $form['email']);
+			if(!$resultcheck)
 			{
-				elp_cls_sendmail::elp_prepare_welcome($form['db']);
-				$message = esc_html(stripslashes($data['elp_c_subhtml']));
-				$message = str_replace("\r\n", "<br />", $message);
+				$result = elp_cls_dbquery::elp_view_subscriber_job("Confirmed", $form['db'], $form['guid'], $form['email']);
+				if($result)
+				{
+					elp_cls_sendmail::elp_prepare_welcome($form['db']);
+					$message = esc_html(stripslashes($data['elp_c_subhtml']));
+					$message = str_replace("\r\n", "<br />", $message);
+				}
+				else
+				{
+					$message = esc_html(stripslashes($data['elp_c_message2']));
+				}
+				if($message == "")
+				{
+					$message = __('Oops.. We are getting some technical error. Please try again or contact admin.', ELP_TDOMAIN);
+				}
+				echo $message;
 			}
 			else
 			{
-				$message = esc_html(stripslashes($data['elp_c_message2']));
-			}
-			if($message == "")
-			{
-				$message = __('Oops.. We are getting some technical error. Please try again or contact admin.', ELP_TDOMAIN);
-			}
+				$message = __('This email address has already been confirmed.', ES_TDOMAIN);
+			}			
 			echo $message;
 		}
 		else

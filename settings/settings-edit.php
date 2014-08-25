@@ -42,6 +42,25 @@ else
 	$data = array();
 	$data = elp_cls_dbquery2::elp_setting_select(1);
 	
+	
+	$elp_c_sentreport_subject = '';
+	$elp_c_sentreport = '';	
+	$elp_c_sentreport_subject = get_option('elp_c_sentreport_subject', 'nosubjectexists');
+	$elp_c_sentreport = get_option('elp_c_sentreport', 'nooptionexists');
+	if($elp_c_sentreport_subject == "nosubjectexists")
+	{	
+		$elp_sentreport_subject = elp_cls_common::elp_sent_report_subject();
+		add_option('elp_c_sentreport_subject', $elp_sentreport_subject);
+		$elp_c_sentreport_subject = $elp_sentreport_subject;
+	}
+	
+	if($elp_c_sentreport == "nooptionexists")
+	{		
+		$elp_sent_report_plain = elp_cls_common::elp_sent_report_plain();
+		add_option('elp_c_sentreport', $elp_sent_report_plain);
+		$elp_c_sentreport = $elp_sent_report_plain;
+	}	
+	
 	// Preset the form fields
 	$form = array(
 		'elp_c_id' => $data['elp_c_id'],
@@ -64,7 +83,9 @@ else
 		'elp_c_unsubhtml' => $data['elp_c_unsubhtml'],
 		'elp_c_subhtml' => $data['elp_c_subhtml'],
 		'elp_c_message1' => $data['elp_c_message1'],
-		'elp_c_message2' => $data['elp_c_message2']
+		'elp_c_message2' => $data['elp_c_message2'],
+		'elp_c_sentreport' => $elp_c_sentreport,
+		'elp_c_sentreport_subject' => $elp_c_sentreport_subject
 	);
 }
 
@@ -132,6 +153,11 @@ if (isset($_POST['elp_form_submit']) && $_POST['elp_form_submit'] == 'yes')
 			$elp_errors[] = __('Oops, details not update.', ELP_TDOMAIN);
 		}
 	}
+	
+	$form['elp_c_sentreport'] = isset($_POST['elp_c_sentreport']) ? $_POST['elp_c_sentreport'] : '';
+	update_option('elp_c_sentreport', $form['elp_c_sentreport'] );
+	$form['elp_c_sentreport_subject'] = isset($_POST['elp_c_sentreport_subject']) ? $_POST['elp_c_sentreport_subject'] : '';
+	update_option('elp_c_sentreport_subject', $form['elp_c_sentreport_subject'] );
 }
 
 if ($elp_error_found == TRUE && isset($elp_errors[0]) == TRUE)
@@ -333,6 +359,21 @@ if ($elp_error_found == FALSE && strlen($elp_success) > 0)
 				<p class="description"><?php _e('Default message to display if any issue on unsubscribe link.', ELP_TDOMAIN); ?></p></label>
 			</th>
 			<td><textarea size="100" id="elp_c_message2" rows="4" cols="58" name="elp_c_message2"><?php echo esc_html(stripslashes($form['elp_c_message2'])); ?></textarea></td>
+		</tr>
+		<!-------------------------------------------------------------------------------->
+		<tr>
+			<th scope="row"> 
+				<label for="elp"><?php _e('Sent report subject', ELP_TDOMAIN); ?>
+				<p class="description"><?php _e('Mail subject for sent mail report.', ELP_TDOMAIN); ?></p></label>
+			</th>
+			<td><input name="elp_c_sentreport_subject" type="text" id="elp_c_sentreport_subject" value="<?php echo esc_html(stripslashes($form['elp_c_sentreport_subject'])); ?>" size="60" maxlength="225" /></td>
+		</tr>
+		<tr>
+			<th scope="row"> 
+				<label for="elp"><?php _e('Sent report content', ELP_TDOMAIN); ?>
+				<p class="description"><?php _e('Mail content for sent mail report.', ELP_TDOMAIN); ?> (Keyword: ###COUNT###, ###UNIQUE###, ###STARTTIME###, ###ENDTIME###)</p></label>
+			</th>
+			<td><textarea size="100" id="elp_c_sentreport" rows="8" cols="58" name="elp_c_sentreport"><?php echo esc_html(stripslashes($form['elp_c_sentreport'])); ?></textarea></td>
 		</tr>
 		<!-------------------------------------------------------------------------------->
 	</tbody>

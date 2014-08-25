@@ -39,16 +39,34 @@ function _elp_resend(id,query)
 	document.frm_elp_display.submit();
 }
 
+function _elp_search_sts_action(sts)
+{
+	var searchquery = document.frm_elp_display.searchquery.value;
+	var cnt = document.frm_elp_display.searchquery_cnt.value;
+	document.frm_elp_display.frm_elp_bulkaction.value = 'search_sts';
+	document.frm_elp_display.action="admin.php?page=elp-view-subscribers&search=" + searchquery + "&sts=" + sts + "&cnt=" + cnt;
+	document.frm_elp_display.submit();
+}
+
+function _elp_search_count_action(cnt)
+{
+	var searchquery = document.frm_elp_display.searchquery.value;
+	var sts = document.frm_elp_display.searchquery_sts.value;
+	document.frm_elp_display.frm_elp_bulkaction.value = 'search_cnt';
+	document.frm_elp_display.action="admin.php?page=elp-view-subscribers&search=" + searchquery + "&sts=" + sts + "&cnt=" + cnt;
+	document.frm_elp_display.submit();
+}
+
 function _elp_bulkaction()
 {
-	if(document.frm_elp_display.action.value=="")
+	if(document.frm_elp_display.bulk_action.value=="")
 	{
 		alert("Please select the bulk action."); 
-		document.frm_elp_display.action.focus();
+		document.frm_elp_display.bulk_action.focus();
 		return false;
 	}
 	
-	if(document.frm_elp_display.action.value == "delete")
+	if(document.frm_elp_display.bulk_action.value == "delete")
 	{
 		if(confirm("Do you want to delete selected record(s)?"))
 		{
@@ -69,7 +87,7 @@ function _elp_bulkaction()
 			return false;
 		}
 	}
-	else if(document.frm_elp_display.action.value == "resend")
+	else if(document.frm_elp_display.bulk_action.value == "resend")
 	{
 		if(confirm("Do you want to resend confirmation email? \nAlso please note, this will update subscriber current status to 'Unconfirmed'."))
 		{

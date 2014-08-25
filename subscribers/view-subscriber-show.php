@@ -2,13 +2,17 @@
 <?php
 // Form submitted, check the data
 $search = isset($_GET['search']) ? $_GET['search'] : 'A,B,C';
+$search_sts = isset($_GET['sts']) ? $_GET['sts'] : '';
+$search_count = isset($_GET['cnt']) ? $_GET['cnt'] : '1';
 if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 {
 	$did = isset($_GET['did']) ? $_GET['did'] : '0';
 	
 	$elp_success = '';
 	$elp_success_msg = FALSE;
-	if (isset($_POST['frm_elp_bulkaction']) && $_POST['frm_elp_bulkaction'] != 'delete' && $_POST['frm_elp_bulkaction'] != 'resend')
+	if (isset($_POST['frm_elp_bulkaction']) && $_POST['frm_elp_bulkaction'] != 'delete' 
+			&& $_POST['frm_elp_bulkaction'] != 'resend' && $_POST['frm_elp_bulkaction'] != 'groupupdate' 
+				&& $_POST['frm_elp_bulkaction'] != 'search_sts' && $_POST['frm_elp_bulkaction'] != 'search_cnt')
 	{	
 		// First check if ID exist with requested ID
 		$result = elp_cls_dbquery::elp_view_subscriber_count($did);
@@ -135,6 +139,14 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 				}
 			}
 		}
+		elseif (isset($_POST['frm_elp_bulkaction']) && $_POST['frm_elp_bulkaction'] == 'search_sts')
+		{
+			// Nothing
+		}
+		elseif (isset($_POST['frm_elp_bulkaction']) && $_POST['frm_elp_bulkaction'] == 'search_cnt')
+		{
+			// Nothing
+		}
 	}
 	
 	if ($elp_success_msg == TRUE)
@@ -156,7 +168,17 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
   <a class="add-new-h2" href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&amp;ac=add"><?php _e('Add New', ELP_TDOMAIN); ?></a></h3>
 	<?php
 	$myData = array();
-	$myData = elp_cls_dbquery::elp_view_subscriber_search($search, 0);
+	$offset = 0;
+	$limit = 200;
+	if ($search_count == 0)
+	{
+		$limit = 9999;
+	}
+	if ($search_count > 1)
+	{
+		$offset = $search_count;
+	}
+	$myData = elp_cls_dbquery::elp_view_subscriber_search2($search, 0, $search_sts, $offset, $limit);
 	?>
 	<div class="tablenav">
 		<span style="text-align:left;">
@@ -210,7 +232,14 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 			$displayisthere = FALSE;
 			if(count($myData) > 0)
 			{
-				$i = 1;
+				if ($offset == 0)
+				{
+					$i = 1;
+				}
+				else
+				{
+					$i = $offset;
+				}
 				foreach ($myData as $data)
 				{					
 					?>
@@ -223,7 +252,7 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 					<td><?php echo $data['elp_email_id']; ?></td>
 					<td><div> 
 					<span class="edit">
-			<a title="Edit" href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&amp;ac=edit&search=<?php echo $search; ?>&amp;did=<?php echo $data['elp_email_id']; ?>">
+						<a title="Edit" href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&amp;ac=edit&search=<?php echo $search; ?>&amp;did=<?php echo $data['elp_email_id']; ?>&sts=<?php echo $search_sts; ?>&cnt=<?php echo $search_count; ?>">
 					<?php _e('Edit', ELP_TDOMAIN); ?></a> | </span> 
 					<span class="trash">
 					<a onClick="javascript:_elp_delete('<?php echo $data['elp_email_id']; ?>','<?php echo $search; ?>')" href="javascript:void(0);">
@@ -262,15 +291,32 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
       <input type="hidden" name="frm_elp_display" value="yes"/>
 	  <input type="hidden" name="frm_elp_bulkaction" value=""/>
 	  <input name="searchquery" id="searchquery" type="hidden" value="<?php echo $search; ?>" />
+	  <input name="searchquery_sts" id="searchquery_sts" type="hidden" value="<?php echo $search_sts; ?>" />
+	  <input name="searchquery_cnt" id="searchquery_cnt" type="hidden" value="<?php echo $search_count; ?>" />
 	<div style="padding-top:10px;"></div>
     <div class="tablenav">
 		<div class="alignleft">
-			<select name="action" id="action">
+			<select name="bulk_action" id="bulk_action">
 				<option value=""><?php _e('Bulk Actions', ELP_TDOMAIN); ?></option>
 				<option value="delete"><?php _e('Delete', ELP_TDOMAIN); ?></option>
 				<option value="resend"><?php _e('Resend Confirmation', ELP_TDOMAIN); ?></option>
 			</select>
 			<input type="submit" value="<?php _e('Apply', ELP_TDOMAIN); ?>" class="button action" id="doaction" name="">
+			<select name="search_sts_action" id="search_sts_action" onchange="return _elp_search_sts_action(this.value)">
+				<option value=""><?php _e('View all status', ELP_TDOMAIN); ?></option>
+				<option value="Confirmed" <?php if($search_sts=='Confirmed') { echo 'selected="selected"' ; } ?>><?php _e('Confirmed', ELP_TDOMAIN); ?></option>
+				<option value="Unconfirmed" <?php if($search_sts=='Unconfirmed') { echo 'selected="selected"' ; } ?>><?php _e('Unconfirmed', ELP_TDOMAIN); ?></option>
+				<option value="Unsubscribed" <?php if($search_sts=='Unsubscribed') { echo 'selected="selected"' ; } ?>><?php _e('Unsubscribed', ELP_TDOMAIN); ?></option>
+				<option value="Single Opt In" <?php if($search_sts=='Single Opt In') { echo 'selected="selected"' ; } ?>><?php _e('Single Opt In', ELP_TDOMAIN); ?></option>
+			</select>
+			<select name="search_count_action" id="search_count_action" onchange="return _elp_search_count_action(this.value)">
+				<option value="1" <?php if($search_count=='1') { echo 'selected="selected"' ; } ?>>1 to 200 emails</option>
+				<option value="201" <?php if($search_count=='201') { echo 'selected="selected"' ; } ?>>201 to 400 emails</option>
+				<option value="401" <?php if($search_count=='401') { echo 'selected="selected"' ; } ?>>401 to 600 emails</option>
+				<option value="601" <?php if($search_count=='601') { echo 'selected="selected"' ; } ?>>601 to 800 emails</option>
+				<option value="801" <?php if($search_count=='801') { echo 'selected="selected"' ; } ?>>801 to 1000 emails</option>
+				<option value="0" <?php if($search_count=='0') { echo 'selected="selected"' ; } ?>>display all</option>
+			</select>
 		</div>
 		<div class="alignright">
 			<a class="button add-new-h2" href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&amp;ac=add"><?php _e('Add New', ELP_TDOMAIN); ?></a> 

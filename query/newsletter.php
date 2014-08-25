@@ -54,7 +54,8 @@ class elp_cls_newsletter
 				$post_title = $post->post_title;
 				$post_author = get_the_author();
 				$post_date = $post->post_modified;
-				
+				$post_category = $post->category;
+								
 				// Get full post
 				$post_full = $post->post_content;
 				$post_full = str_replace($replacefrom, $replaceto, $post_full);

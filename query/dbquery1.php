@@ -36,6 +36,49 @@ class elp_cls_dbquery
 		return $arrRes;
 	}
 	
+	public static function elp_view_subscriber_search2($search = "", $id = 0, $search_sts = "", $offset = 0, $limit = 0)
+	{
+		global $wpdb;
+		$prefix = $wpdb->prefix;
+		$arrRes = array();
+		$sSql = "SELECT * FROM `".$prefix."elp_emaillist` where elp_email_mail <> '' ";
+		if($search_sts <> "")
+		{
+			$sSql = $sSql . " and elp_email_status='".$search_sts."'";
+		}
+		if($search <> "")
+		{
+			$letter = explode(',', $search);
+			$length = count($letter);
+			for ($i = 0; $i < $length; $i++) 
+			{
+				if($i == 0)
+				{
+					$sSql = $sSql . " and (";
+				}
+				else
+				{
+					$sSql = $sSql . " or";
+				}
+				$sSql = $sSql . " elp_email_mail LIKE '" . $letter[$i]. "%'";
+				if($i == $length-1)
+				{
+					$sSql = $sSql . ")";
+				}
+			}
+		}
+		if($id > 0)
+		{
+			$sSql = $sSql . " and elp_email_id=".$id;
+			
+		}
+		$sSql = $sSql . " order by elp_email_id asc";
+		$sSql = $sSql . " LIMIT $offset, $limit";
+		//echo $sSql;
+		$arrRes = $wpdb->get_results($sSql, ARRAY_A);
+		return $arrRes;
+	}
+	
 	public static function elp_view_subscriber_count($id = 0)
 	{
 		global $wpdb;
@@ -171,6 +214,28 @@ class elp_cls_dbquery
 			$sSql = $sSql . " and elp_email_guid = %s Limit 1";
 			$sSql = $wpdb->prepare($sSql, array($status, $id, $email, $guid));
 			$wpdb->query($sSql);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static function elp_view_subscriber_jobstatus($status = "", $id = 0, $guid = "", $email = "")
+	{
+		global $wpdb;
+		$prefix = $wpdb->prefix;
+		
+		$sSql = "SELECT COUNT(*) AS `count` FROM `".$prefix."elp_emaillist`";
+		$sSql = $sSql . " WHERE elp_email_id = %d";
+		$sSql = $sSql . " and elp_email_mail = %s";
+		$sSql = $sSql . " and elp_email_status = %s";
+		$sSql = $sSql . " and elp_email_guid = %s Limit 1";
+		$sSql = $wpdb->prepare($sSql, array($id, $email, $status, $guid));
+		$result = $wpdb->get_var($sSql);
+		if ( $result > 0)
+		{
 			return true;
 		}
 		else

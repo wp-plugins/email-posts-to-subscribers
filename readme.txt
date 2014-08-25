@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
-Tested up to: 3.9.1
-Stable tag: 1.5
+Tested up to: 4.0
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,16 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select single post in the newsletter). With this option we can create Mail Configuration for 1 post.
 3. Formatted some mail content.
 
+= 1.6 =
+
+1. Tested up to WordPress 4.0
+2. In view subscribers admin page, new option added to filter the email address based on status.
+3. Paging option added on view subscribers admin page. In default it will show only first 200 emails, you have drop down box to navigate another page (i.e. 201 to 400 emails etc..).
+4. Warning message fix on email address import page (i.e Strict standards: Only variables should be passed by reference)	- Fixed
+5. Widget translation issue has been fixed
+6. PHP warning message from Subscribers Export page has been removed.
+7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -169,3 +179,13 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 1. Full post keyword (###POSTFULL###) added in the Template Compose page. Now using this keyword we can add full post in the newsletter.
 2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select single post in the newsletter). With this option we can create Mail Configuration for 1 post.
 3. Formatted some mail content.
+
+= 1.6 =
+
+1. Tested up to WordPress 4.0
+2. In view subscribers admin page, new option added to filter the email address based on status.
+3. Paging option added on view subscribers admin page. In default it will show only first 200 emails, you have drop down box to navigate another page (i.e. 201 to 400 emails etc..).
+4. Warning message fix on email address import page (i.e Strict standards: Only variables should be passed by reference)	- Fixed
+5. Widget translation issue has been fixed
+6. PHP warning message from Subscribers Export page has been removed.
+7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.

@@ -44,3 +44,13 @@ add full post in the newsletter.
 2. In the Mail Configuration post count 1 has been added (Previously we don't have option to select 
 single post in the newsletter). With this option we can create Mail Configuration for 1 post.
 3. Formatted some mail content.
+
+********************************Version 1.6************************************************************
+
+1. Tested up to WordPress 4.0
+2. In view subscribers admin page, new option added to filter the email address based on status.
+3. Paging option added on view subscribers admin page. In default it will show only first 200 emails, you have drop down box to navigate another page (i.e. 201 to 400 emails etc..).
+4. Warning message fix on email address import page (i.e Strict standards: Only variables should be passed by reference)	- Fixed
+5. Widget translation issue has been fixed
+6. PHP warning message from Subscribers Export page has been removed.
+7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.

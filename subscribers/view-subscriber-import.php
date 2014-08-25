@@ -18,7 +18,8 @@ if (isset($_POST['elp_form_submit']) && $_POST['elp_form_submit'] == 'yes')
 	//	Just security thingy that wordpress offers us
 	check_admin_referer('elp_form_add');
 	
-	$extension = strtolower(end(explode('.', $_FILES['elp_csv_name']['name'])));
+	$extension = pathinfo($_FILES['elp_csv_name']['name'], PATHINFO_EXTENSION);
+	//$extension = strtolower(end(explode('.', $_FILES['elp_csv_name']['name'])));
 	$tmpname = $_FILES['elp_csv_name']['tmp_name'];
 	
 	if($extension === 'csv')

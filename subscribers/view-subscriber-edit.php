@@ -3,6 +3,8 @@
 <?php
 $did = isset($_GET['did']) ? $_GET['did'] : '0';
 $search = isset($_GET['search']) ? $_GET['search'] : 'A,B,C';
+$sts = isset($_GET['sts']) ? $_GET['sts'] : '';
+$cnt = isset($_GET['cnt']) ? $_GET['cnt'] : '1';
 
 // First check if ID exist with requested ID
 $result = elp_cls_dbquery::elp_view_subscriber_count($did);
@@ -67,7 +69,7 @@ if ($elp_error_found == FALSE && strlen($elp_success) > 0)
 	?>
 	<div class="updated fade">
 		<p><strong><?php echo $elp_success; ?> 
-		<a href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&search=<?php echo $search; ?>">
+		<a href="<?php echo ELP_ADMINURL; ?>?page=elp-view-subscribers&search=<?php echo $search; ?>&sts=<?php echo $sts; ?>&cnt=<?php echo $cnt; ?>">
 		<?php _e('Click here', ELP_TDOMAIN); ?></a> <?php _e(' to view the details', ELP_TDOMAIN); ?></strong></p>
 	</div>
 	<?php

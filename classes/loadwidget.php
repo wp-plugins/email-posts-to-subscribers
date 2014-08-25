@@ -42,17 +42,17 @@ function elp_shortcode( $atts )
 	$elp = $elp . '<div class="elp_msg"><span id="elp_msg"></span></div>';
 	if( $elp_name == "YES" )
 	{
-		$elp = $elp . '<div class="elp_lablebox">Name</div>';
+		$elp = $elp . '<div class="elp_lablebox">'.__('Name', ELP_TDOMAIN).'</div>';
 		$elp = $elp . '<div class="elp_textbox">';
 			$elp = $elp . '<input class="elp_textbox_class" name="elp_txt_name" id="elp_txt_name" value="" maxlength="225" type="text">';
 		$elp = $elp . '</div>';
 	}
-	$elp = $elp . '<div class="elp_lablebox">Email *</div>';
+	$elp = $elp . '<div class="elp_lablebox">'.__('Email *', ELP_TDOMAIN).'</div>';
 	$elp = $elp . '<div class="elp_textbox">';
 		$elp = $elp . '<input class="elp_textbox_class" name="elp_txt_email" id="elp_txt_email" onkeypress="if(event.keyCode==13) elp_submit_page('.$url.')" value="" maxlength="225" type="text">';
 	$elp = $elp . '</div>';
 	$elp = $elp . '<div class="elp_button">';
-		$elp = $elp . '<input class="elp_textbox_button" name="elp_txt_button" id="elp_txt_button" onClick="return elp_submit_page('.$url.')" value="Subscribe" type="button">';
+		$elp = $elp . '<input class="elp_textbox_button" name="elp_txt_button" id="elp_txt_button" onClick="return elp_submit_page('.$url.')" value="'.__('Subscribe', ELP_TDOMAIN).'" type="button">';
 	$elp = $elp . '</div>';
 	if( $elp_name != "YES" )
 	{

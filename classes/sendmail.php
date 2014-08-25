@@ -270,14 +270,31 @@ class elp_cls_sendmail
 			elp_cls_dbquery2::elp_sentmail_ups($sendguid);
 			if($adminmail <> "")
 			{
-				$subject = elp_cls_common::elp_sent_report_subject();
+				
+				$subject = get_option('elp_c_sentreport_subject', 'nosubjectexists');
+				if ( $subject == "" || $subject == "nosubjectexists")
+				{
+					$subject = elp_cls_common::elp_sent_report_subject();
+				}
+				
 				if($htmlmail)
 				{
-					$reportmail = elp_cls_common::elp_sent_report_html();
+					$reportmail = get_option('elp_c_sentreport', 'nooptionexists');
+					if ( $reportmail == "" || $reportmail == "nooptionexists")
+					{
+						$reportmail = elp_cls_common::elp_sent_report_html();
+					}
+					$reportmail = nl2br($reportmail);
 				}
 				else
 				{
-					$reportmail = elp_cls_common::elp_sent_report_plain();
+					$reportmail = get_option('elp_c_sentreport', 'nooptionexists');
+					if ( $reportmail == "" || $reportmail == "nooptionexists")
+					{
+						$reportmail = elp_cls_common::elp_sent_report_plain();
+					}
+					$reportmail = str_replace("<br />", "\r\n", $reportmail);
+					$reportmail = str_replace("<br>", "\r\n", $reportmail);
 				}
 				$enddate = date('Y-m-d G:i:s');
 				$reportmail = str_replace("###COUNT###", $count, $reportmail);	
