@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 1.6
+Tested up to: 4.1
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,10 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 6. PHP warning message from Subscribers Export page has been removed.
 7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.
 
+= 1.7 =
+
+1. Tested up to 4.1
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -189,3 +193,7 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 5. Widget translation issue has been fixed
 6. PHP warning message from Subscribers Export page has been removed.
 7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.
+
+= 1.7 =
+
+1. Tested up to 4.1
