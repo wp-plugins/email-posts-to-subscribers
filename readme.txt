@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 Plugin URI: http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts-to-subscribers/
 Tags: email newsletter, subscription Box, sendmail
 Requires at least: 3.4
-Tested up to: 4.1
-Stable tag: 1.7
+Tested up to: 4.2.2
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,10 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 
 1. Tested up to 4.1
 
+= 1.8 =
+
+1. Tested up to 4.2.2
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -197,3 +201,7 @@ FAQ Answer [http://www.gopiplus.com/work/2014/03/28/wordpress-plugin-email-posts
 = 1.7 =
 
 1. Tested up to 4.1
+
+= 1.8 =
+
+1. Tested up to 4.2.2
