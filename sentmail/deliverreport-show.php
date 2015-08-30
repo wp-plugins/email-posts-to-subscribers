@@ -31,7 +31,7 @@ if ($sentguid == '')
       <table width="100%" class="widefat" id="straymanage">
         <thead>
           <tr>
-            <th width="3%" class="check-column" scope="col"><input type="checkbox" name="elp_group_item[]" /></th>
+            <th width="3%" class="check-column" scope="col" style="padding: 8px 2px;"><input type="checkbox" name="elp_group_item[]" /></th>
 			<th scope="col"><?php _e('Email', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Sent Date', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Viewed Status', ELP_TDOMAIN); ?></th>
@@ -41,7 +41,7 @@ if ($sentguid == '')
         </thead>
 		<tfoot>
           <tr>
-            <th width="3%" class="check-column" scope="col"><input type="checkbox" name="elp_group_item[]" /></th>
+            <th width="3%" class="check-column" scope="col" style="padding: 8px 2px;"><input type="checkbox" name="elp_group_item[]" /></th>
 			<th scope="col"><?php _e('Email', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Sent Date', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Viewed Status', ELP_TDOMAIN); ?></th>

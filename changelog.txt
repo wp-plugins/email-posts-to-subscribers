@@ -54,3 +54,16 @@ single post in the newsletter). With this option we can create Mail Configuratio
 5. Widget translation issue has been fixed
 6. PHP warning message from Subscribers Export page has been removed.
 7. Added check for Already Confirmed emails. This is to prevent user clicking optin email link multiple time.
+
+********************************Version 1.7************************************************************
+
+1. Tested up to 4.1
+
+********************************Version 1.8************************************************************
+
+1. Tested up to 4.2.2
+
+********************************Version 1.9************************************************************
+
+1. Tested up to WordPress 4.3
+2. Security check added for cross-site scripting vulnerabilities and a potential SQL injection.

@@ -1,7 +1,10 @@
 <?php if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); } ?>
 <?php
 $did = isset($_GET['did']) ? $_GET['did'] : '0';
+if(!is_numeric($did)) { die('<p>Are you sure you want to do this?</p>'); }
 $pagenum = isset( $_GET['pagenum'] ) ? absint( $_GET['pagenum'] ) : 1;
+if(!is_numeric($pagenum)) { die('<p>Are you sure you want to do this?</p>'); }
+
 // First check if ID exist with requested ID
 $result = elp_cls_dbquery::elp_configuration_count($did);
 if ($result != '1')

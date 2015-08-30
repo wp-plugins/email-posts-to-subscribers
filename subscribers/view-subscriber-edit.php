@@ -6,6 +6,9 @@ $search = isset($_GET['search']) ? $_GET['search'] : 'A,B,C';
 $sts = isset($_GET['sts']) ? $_GET['sts'] : '';
 $cnt = isset($_GET['cnt']) ? $_GET['cnt'] : '1';
 
+if(!is_numeric($did)) { die('<p>Are you sure you want to do this?</p>'); }
+if(!is_numeric($cnt)) { die('<p>Are you sure you want to do this?</p>'); }
+
 // First check if ID exist with requested ID
 $result = elp_cls_dbquery::elp_view_subscriber_count($did);
 if ($result != '1')

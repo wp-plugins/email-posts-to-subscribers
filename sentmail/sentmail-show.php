@@ -4,6 +4,7 @@
 if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 {
 	$did = isset($_GET['did']) ? $_GET['did'] : '0';
+	if(!is_numeric($did)) { die('<p>Are you sure you want to do this?</p>'); }
 	
 	$elp_success = '';
 	$elp_success_msg = FALSE;
@@ -68,7 +69,7 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
       <table width="100%" class="widefat" id="straymanage">
         <thead>
           <tr>
-            <th width="3%" class="check-column" scope="col"><input type="checkbox" name="elp_group_item[]" /></th>
+            <th width="3%" class="check-column" scope="col" style="padding: 8px 2px;"><input type="checkbox" name="elp_group_item[]" /></th>
 			<th scope="col"><?php _e('View Reports', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Mail Preview', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Sent Source', ELP_TDOMAIN); ?></th>
@@ -80,7 +81,7 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
         </thead>
 		<tfoot>
           <tr>
-            <th width="3%" class="check-column" scope="col"><input type="checkbox" name="elp_group_item[]" /></th>
+            <th width="3%" class="check-column" scope="col" style="padding: 8px 2px;"><input type="checkbox" name="elp_group_item[]" /></th>
 			<th scope="col"><?php _e('View Reports', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Mail Preview', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Sent Source', ELP_TDOMAIN); ?></th>

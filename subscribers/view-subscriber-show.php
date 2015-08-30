@@ -4,6 +4,22 @@
 $search = isset($_GET['search']) ? $_GET['search'] : 'A,B,C';
 $search_sts = isset($_GET['sts']) ? $_GET['sts'] : '';
 $search_count = isset($_GET['cnt']) ? $_GET['cnt'] : '1';
+
+// ------------ Security check----------------------------------------------------------------
+if(!is_numeric($search_count)) { die('<p>Security check failed. Are you sure you want to do this?</p>'); }
+if(!is_numeric($search_count)) { die('<p>Security check failed. Are you sure you want to do this?</p>'); }
+$search_nocomma = str_replace(",", "", $search);
+if(preg_match('/[^a-z_\-0-9]/i', $search_nocomma))
+{
+	die('<p>Security check failed. Are you sure you want to do this?</p>');
+}
+if($search_sts != '' && $search_sts != 'Confirmed' 
+	&& $search_sts != 'Unconfirmed' && $search_sts != 'Unsubscribed' && $search_sts != 'Single Opt In')
+{
+	die('<p>Security check failed. Are you sure you want to do this?</p>');
+}
+// ------------ Security check----------------------------------------------------------------
+
 if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
 {
 	$did = isset($_GET['did']) ? $_GET['did'] : '0';
@@ -204,7 +220,7 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
       <table width="100%" class="widefat" id="straymanage">
         <thead>
           <tr>
-            <th class="check-column" scope="col">
+            <th class="check-column" scope="col" style="padding: 8px 2px;">
 			<input type="checkbox" name="elp_checkall" id="elp_checkall" onClick="_elp_checkall('frm_elp_display', 'chk_delete[]', this.checked);" /></th>
             <th scope="col"><?php _e('Sno', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Email', ELP_TDOMAIN); ?></th>
@@ -216,7 +232,7 @@ if (isset($_POST['frm_elp_display']) && $_POST['frm_elp_display'] == 'yes')
         </thead>
         <tfoot>
           <tr>
-            <th class="check-column" scope="col">
+            <th class="check-column" scope="col" style="padding: 8px 2px;">
 			<input type="checkbox" name="elp_checkall" id="elp_checkall" onClick="_elp_checkall('frm_elp_display', 'chk_delete[]', this.checked);" /></th>
             <th scope="col"><?php _e('Sno', ELP_TDOMAIN); ?></th>
 			<th scope="col"><?php _e('Email address', ELP_TDOMAIN); ?></th>
